@@ -20,9 +20,9 @@ jobs:
         uses: crazy-max/ghaction-docker-buildx@v1.3.0
         with:
           version: latest
-         
+
       - name: Log into registry
-        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u haamutech --password-stdin
 
       - name: Build and push multiplatform Docker images
         run: |
